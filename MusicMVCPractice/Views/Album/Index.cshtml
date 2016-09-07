@@ -1,0 +1,30 @@
+﻿@model List<MusicMVCPractice.Models.Album>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>List of Albums:</h2>
+@using (Html.BeginForm())
+{
+
+    <div>
+        List Of Artists:
+        <table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Title)<br />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)<br />
+                    </td>
+
+
+                </tr>
+            }
+        </table>
+    </div>
+    <a href="../Album/Add">Submit form</a>
+}

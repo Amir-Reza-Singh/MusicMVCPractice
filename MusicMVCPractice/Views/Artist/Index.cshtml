@@ -1,0 +1,28 @@
+﻿@model List<MusicMVCPractice.Models.Artist>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<h2>List Of Artists:</h2>
+@using (Html.BeginForm())
+{
+    
+    <div>
+        List Of Artists:
+        <table>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)<br />
+                    </td>
+
+
+                </tr>
+            }
+        </table>
+    </div>
+    <a href="../Artist/Add">Add Artist</a>
+}

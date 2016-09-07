@@ -1,0 +1,15 @@
+﻿@model MusicMVCPractice.Models.Album
+@{
+    ViewBag.Title = "Add";
+}
+
+<h2>Add</h2>
+
+
+@using (@Html.BeginForm())
+{
+    @Html.TextBoxFor(modelItem => Model.Name);
+    @Html.TextBoxFor(modelItem => Model.Title);
+
+    <input type="submit" class="btn_submit" value="Add" name="Add" />
+}
